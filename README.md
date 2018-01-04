@@ -1,42 +1,40 @@
 ![YayProto](logo.png "YayProto")
 
+# Vestarin smart contract
+
 * _Standart_        : ERC20
 * _Name_            : YayProto
 * _Ticket_          : YPT
 * _Decimals_        : 18
-* _Emission_        : Single
-* _Token events_    : 2
+* _Emission_        : Mintable
+* _Crowdsales_      : 2
 * _Fiat dependency_ : No
 * _Tokens locked_   : Yes
 
-## Social links
-### Facebook -
-### Twitter - 
-### Reddit - 
-### Telegram - 
-### Medium - 
-### Instagram - 
-
 ## Smart-contracts description
 
-Contract mint bounty, advisors and founders tokens after each stage finished. 
+Contract mint bounty and founders tokens after main sale stage finished. 
 Crowdsale contracts have special function to retrieve transferred in errors tokens.
+Also crowdsale contracts have special function to direct mint tokens in wei value (featue implemneted to support external pay gateway).
 
 ### Contracts contains
-1. _YayProto_ 
-2. _PreTGE_
-2. _TGE_
+1. _YayProtoToken_ - Token contract
+2. _Presale_ - Presale contract
+3. _Mainsale_ - ICO contract
+4. _Configurator_ - contract with main configuration for production
 
 ### How to manage contract
 To start working with contract you should follow next steps:
-1. Compile it in Remix with enamble optimization flag and compiler 0.4.19
-2. Deploy bytecode with MyEtherWallet. 
+1. Compile it in Remix with enamble optimization flag and compiler 0.4.18
+2. Deploy bytecode with MyEtherWallet. Gas 5100000 (actually 5073514).
+3. Call 'deploy' function on addres from (3). Gas 4000000 (actually 3979551). 
 
-After crowdsale contract manager must call finishMinting. 
+Contract manager must call finishMinting after each crowdsale milestone!
+To support external mint service manager should specify address by calling _setDirectMintAgent_. After that specified address can direct mint VST tokens by calling _directMint_.
 
-### How to purchase tokens
-To purchase tokens user should sedn request to contract manager (to add to whitelist), and then send ETH (more than minimum 0.1 EHT) to corresponding crowdsale contract.
-Recommended GAS: xxx xxx , GAS PRICE - 30 Gwei.
+### How to invest
+To purchase tokens investor should send ETH (more than minimum 0.1 ETH) to corresponding crowdsale contract.
+Recommended GAS: 250000, GAS PRICE - 21 Gwei.
 
 ### Wallets with ERC20 support
 1. MyEtherWallet - https://www.myetherwallet.com/
@@ -45,32 +43,45 @@ Recommended GAS: xxx xxx , GAS PRICE - 30 Gwei.
 
 EXODUS not support ERC20, but have way to export key into MyEtherWallet - http://support.exodus.io/article/128-how-do-i-receive-unsupported-erc20-tokens
 
-Purchaser must not use other wallets, coinmarkets or stocks. Can lose money.
+Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Main network configuration
 
-### Tokens distribution
+* _Minimal insvested limit_     : 0.1 ETH
+* _Price_                       :  YPT per 1 ETH
+* _Marketing tokens percent_    : 5% 
+* _Developers tokens percent_   : 10% 
+* _Advisors tokens percent_     : 10% 
+* _Team tokens wallet_          : 10%
+* _For sale_                    : 65%
 
-### Addresses
-* _Wallet for contribution_    :
-* _Foudation wallet_           :
-* _Contracts manager_          : 
+### Links
+1. _Token_ -
+2. _Presale_ -
+3. _Mainsale_ -
 
-#### Links
-* _Token_ - 
-* _TGE_ - 
-* _TimelineWallet_ - 
+### Crowdsale stages
 
-#### Token Generation Event
-* _Base price_                 : 1 ETH = 7500 
-* _Minimal insvested limit_    : 0.1 ETH
-* _Hardcap_                    : 150 000 000 
+#### Presale
+* _Hardcap_                    : 11 250 ETH
+* _Start_                      : 15 Feb 2018 13:00:00 GMT
+* _Wallet_                     : 
+* _Contract owner_             : 
 
 _Milestones_
-1. (15 Jan 2018 00:00 - 22 Jan 2018 00:00) +20% tokens
-2. (22 Jan 2018 00:00 - 28 Jan 2018 00:00) +15% tokens
-3. (29 Jan 2018 00:00 - 4 Feb 2018 00:00) +10% tokens
-4. (4 Feb 2018 00:00 - 4 Feb 2018 01:00 ) +5% tokens
-5. (4 Feb 2018 01:00 - 22 Feb 2018 00:00) without bonus
+* 5 days - bonus 80%
+* 5 days - bonus 60%
+* 5 days - bonus 40%
 
+#### ICO
+* _Hardcap_                    : 95 000 ETH
+* _Start_                      : 
+* _Wallet_                     : 
+* _Contract owner_             : 
+
+_Milestones_
+* 7 days - bonus 15%
+* 7 days - bonus 10%
+* 7 days - bonus  5%
+* 7 days - without bonus
 
