@@ -1,6 +1,6 @@
 ![YayProto](logo.png "YayProto")
 
-# Vestarin smart contract
+# YayProto smart contract
 
 * _Standart_        : ERC20
 * _Name_            : YayProto
