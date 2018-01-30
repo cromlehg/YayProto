@@ -4,7 +4,7 @@
 
 * _Standart_        : ERC20
 * _Name_            : YayProto
-* _Ticket_          : YPT
+* _Ticket_          : YFN
 * _Decimals_        : 18
 * _Emission_        : Mintable
 * _Crowdsales_      : 2
@@ -48,7 +48,7 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 ## Main network configuration
 
 * _Minimal insvested limit_     : 0.1 ETH
-* _Price_                       :  YPT per 1 ETH
+* _Price_                       : 7500 YPT per 1 ETH
 * _Marketing tokens percent_    : 5% 
 * _Developers tokens percent_   : 10% 
 * _Advisors tokens percent_     : 10% 
@@ -64,24 +64,34 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 #### Presale
 * _Hardcap_                    : 11 250 ETH
-* _Start_                      : 15 Feb 2018 13:00:00 GMT
-* _Wallet_                     : 
-* _Contract owner_             : 
+* _Softcap_                    : 3000 ETH
+* _Start_                      : 31 Jan 2018 00:00:00 GMT
+* _Wallet_                     : 0x00c286bFbEfa2e7D060259822EDceA2E922a2B7C
+* _Contract owner_             : 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A
 
 _Milestones_
 * 5 days - bonus 80%
-* 5 days - bonus 60%
+* 5 days - bonus 50%
 * 5 days - bonus 40%
+* 5 days - bonus 30%
+* 5 days - bonus 25%
+* 5 days - bonus 20%
 
 #### ICO
 * _Hardcap_                    : 95 000 ETH
 * _Start_                      : 
-* _Wallet_                     : 
-* _Contract owner_             : 
+* _Wallet_                     : 0x009693f53723315219f681529fE6e05a91a28C41
+* _Contract owner_             : 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A
+* _Developers tokens wallet_   : 0x0097895f899559D067016a3d61e3742c0da533ED
+* _Team tokens wallet_         : 0x00137668FEda9d278A242C69aB520466A348C954
+* _Marketing tokens wallet_    : 0x00A8a63f43ce630dbd3b96F1e040A730341bAa4D
+* _Advisors tokensw wallet_    : 0x00764817d154237115DdA4FAA76C7aaB5dE3cb25
+
 
 _Milestones_
 * 7 days - bonus 15%
 * 7 days - bonus 10%
-* 7 days - bonus  5%
+* 7 days - bonus  7%
+* 7 days - bonus  4%
 * 7 days - without bonus
 
