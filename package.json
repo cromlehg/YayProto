@@ -22,7 +22,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "truffle test",
-    "flatten": "./node_modules/.bin/truffle-flattener ./contracts/Configurator.sol > ./deploy/Configurator.sol"
+    "flatten": "./node_modules/.bin/truffle-flattener ./contracts/Configurator.sol > ./deploy/contracts.sol"
   },
   "repository": {
     "type": "git",
