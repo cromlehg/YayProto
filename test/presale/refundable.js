@@ -90,7 +90,6 @@ export default function (Token, Crowdsale, wallets) {
     await increaseTimeTo(this.afterEnd);
     const pre = web3.eth.getBalance(wallets[2]);
     await crowdsale.finishMinting({from: wallets[1]}).should.be.fulfilled;
-    await crowdsale.withdraw({from: wallets[1]});
     const post = web3.eth.getBalance(wallets[2]);
     post.minus(pre).should.be.bignumber.equal(investment);
   });
