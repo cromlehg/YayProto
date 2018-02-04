@@ -50,13 +50,13 @@ contract CommonSale is StagedCrowdsale, WalletProvider {
     uint milestoneIndex = currentMilestone();
     Milestone storage milestone = milestones[milestoneIndex];
     invested = invested.add(msg.value);
-    uint tokens = weiInvested.mul(1 ether).div(price);
+    uint tokens = weiInvested.mul(price).div(1 ether);
     uint bonusTokens = tokens.mul(milestone.bonus).div(percentRate);
     uint tokensWithBonus = tokens.add(bonusTokens);
     createAndTransferTokens(to, tokensWithBonus);
   }
 
-  function createAndTransferTokens(address to, uint tokens) public onlyDirectMintAgentOrOwner isUnderHardCap {
+  function createAndTransferTokens(address to, uint tokens) internal isUnderHardCap {
     token.mint(this, tokens);
     token.transfer(to, tokens);
   }
