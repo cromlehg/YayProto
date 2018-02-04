@@ -1,11 +1,11 @@
 pragma solidity ^0.4.18;
 
-import 'localhost/ownership/Ownable.sol';
+import './ownership/Ownable.sol';
 
 contract YayProtoToken {
    function setSaleAgent(address newSaleAgent) public;
    function transferOwnership(address newOwner) public;
-    
+
 }
 
 contract Presale {
@@ -19,7 +19,7 @@ contract Presale {
     function setMinPrice(uint newMinPrice) public;
     function setPrice(uint newPrice) public;
     function setToken(address newToken) public;
-    function transferOwnership(address newOwner) public;    
+    function transferOwnership(address newOwner) public;
 }
 
 contract Mainsale {
@@ -40,16 +40,16 @@ contract Mainsale {
     function setPrice(uint newPrice) public;
     function setToken(address newToken) public;
     function transferOwnership(address newOwner) public;
-    
+
 }
 
 contract TestConfigurator is Ownable {
-    
+
     function deploy(address _token, address _presale, address _mainsale) public onlyOwner{
         YayProtoToken token = YayProtoToken(_token);
         Presale presale = Presale(_presale);
         Mainsale mainsale = Mainsale(_mainsale);
-        
+
         presale.setPrice(7500);
         presale.setWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
         presale.setStart(1517356800);
@@ -65,7 +65,7 @@ contract TestConfigurator is Ownable {
         presale.addMilestone(7,20);
         presale.setToken(_token);
         presale.transferOwnership(owner);
-        
+
         mainsale.setPrice(7500);
         mainsale.setWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
         mainsale.setDevelopersTokensWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
@@ -86,10 +86,10 @@ contract TestConfigurator is Ownable {
         mainsale.addMilestone(7,0);
         mainsale.setToken(_token);
         mainsale.transferOwnership(owner);
-        
+
         token.setSaleAgent(_presale);
         token.transferOwnership(owner);
-        
+
     }
-    
+
 }
