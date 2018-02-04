@@ -68,8 +68,8 @@ contract TestConfigurator is Ownable {
         presale.setStart(1517356800);
         presale.setMinPrice(100000000000000000);
         presale.setPrice(7500000000000000000000);
-        presale.setSoftcap(3000000000000000000000);
-        presale.setHardcap(11250000000000000000000);
+        presale.setSoftcap(3000000000000000000);
+        presale.setHardcap(6000000000000000000);
         presale.addMilestone(7,60);
         presale.addMilestone(7,50);
         presale.addMilestone(7,40);
@@ -87,7 +87,7 @@ contract TestConfigurator is Ownable {
         mainsale.setAdvisorsTokensWallet(0x00764817d154237115DdA4FAA76C7aaB5dE3cb25);
         mainsale.setStart(1523750400);
         mainsale.setMinPrice(100000000000000000);
-        mainsale.setHardcap(95000000000000000000000);
+        mainsale.setHardcap(6000000000000000000);
         mainsale.setDevelopersTokensPercent(10);
         mainsale.setTeamTokensPercent(10);
         mainsale.setMarketingTokensPercent(5);
