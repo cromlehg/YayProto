@@ -35,6 +35,12 @@ contract YayProtoToken is MintableToken {
     return true;
   }
 
+  function finishMinting() onlyOwnerOrSaleAgent canMint public returns (bool) {
+    mintingFinished = true;
+    MintFinished();
+    return true;
+  }
+
   function transfer(address _to, uint256 _value) public notLocked returns (bool) {
     return super.transfer(_to, _value);
   }
