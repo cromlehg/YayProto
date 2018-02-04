@@ -21,7 +21,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "truffle test",
+    "test": "./node_modules/.bin/truffle test",
     "flatten": "./node_modules/.bin/truffle-flattener ./contracts/Configurator.sol > ./deploy/contracts.sol"
   },
   "repository": {
