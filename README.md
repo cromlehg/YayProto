@@ -95,3 +95,57 @@ _Milestones_
 * 7 days - bonus  4%
 * 7 days - without bonus
 
+
+## Ropsten network configuration 
+
+### links
+1. _Token_ - https://ropsten.etherscan.io/address/0x2f7d7e0700f4109071ec83180ec13fabcb0e323a
+2. _Presale_ - https://ropsten.etherscan.io/address/0xc58f8ba58c59a01e9d2f4d000fd439953210b821
+3. _Mainsale_ - https://ropsten.etherscan.io/address/0xae4693a85eca2125519cc2c6824b2a3573b17721
+
+
+### Crowdsale stages
+
+#### Presale
+
+* _Price_                    : 7500 YPT per 1 ETH
+* _Minimal investment limit_ : 0.1 ETH
+* _Softcap_                  : 3 ETH
+* _Hardcap_                  : 6 ETH
+* _Wallet_                   : 0x8fd94be56237ea9d854b23b78615775121dd1e82
+
+_Milestones_
+
+* 7 days - bonus 60%
+* 7 days - bonus 50%
+* 7 days - bonus 40%
+* 7 days - bonus 30%
+* 7 days - bonus 25%
+* 7 days - bonus 20%
+
+
+##### Purchasers
+
+* 0.1 ETH => 750 tokens + 450 bonus tokens (60%), gas = 151997
+https://ropsten.etherscan.io/tx/0x4e29b5c40d1d4ef30812c14dfaa79ffa0d2d52050776c64cadcbea304a110545
+
+* 0.099 ETH => rejected txn, less then mininal investment limit, gas = 21270
+https://ropsten.etherscan.io/tx/0x946956324248641601b07458857f381f43230fd18ecfea7e2645fedd779e1094
+
+* 3 ETH => 2250 tokens + 1125 bonus tokens (50%), gas = 98652
+https://ropsten.etherscan.io/tx/0xe9cba050db9a8b02156fb81cc5ef8583c21469e0258149c9c09b09127d626521
+
+* 0.2 ETH => rejected txn, end of Presale, gas = 22528
+https://ropsten.etherscan.io/tx/0x5ba8b4b82a757d050d1da62adb97b4b4931610dfbe445d4d067be41c01dbc5dc
+
+##### Service operations
+
+* setStart, gas = 27868
+https://ropsten.etherscan.io/tx/0x0fb9d4b27f996c0d4954ac9a8d7e8c5e786b33c3ca6d95b056fdc4d87e7a9a9e
+
+* setStart, gas = 27932
+https://ropsten.etherscan.io/tx/0x1555fddb9176c7464346dad2bdefcb942ec9f75dbb16e3a282011158d34aecf7
+
+* withdraw => 3.1 ETH to wallet, gas = 30262  
+https://ropsten.etherscan.io/tx/0x1f6552b2b7d8c363e326bf95cd154971b4c23c914dacb8a293d661af92e46509
+
