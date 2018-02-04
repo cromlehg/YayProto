@@ -47,12 +47,12 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Main network configuration
 
-* _Minimal insvested limit_     : 0.1 ETH
+* _Minimum invesment limit_     : 0.1 ETH
 * _Price_                       : 7500 YPT per 1 ETH
 * _Marketing tokens percent_    : 5% 
 * _Developers tokens percent_   : 10% 
 * _Advisors tokens percent_     : 10% 
-* _Team tokens wallet_          : 10%
+* _Team tokens percent_         : 10%
 * _For sale_                    : 65%
 
 ### Links
