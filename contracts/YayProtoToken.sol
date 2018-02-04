@@ -17,9 +17,22 @@ contract YayProtoToken is MintableToken {
     _;
   }
 
+  modifier onlyOwnerOrSaleAgent() {
+    require(msg.sender == owner || msg.sender == saleAgent);
+    _;
+  }
+
   function setSaleAgent(address newSaleAgent) public {
     require(msg.sender == owner || msg.sender == saleAgent);
     saleAgent = newSaleAgent;
+  }
+
+  function mint(address _to, uint256 _amount) onlyOwnerOrSaleAgent canMint public returns (bool) {
+    totalSupply = totalSupply.add(_amount);
+    balances[_to] = balances[_to].add(_amount);
+    Mint(_to, _amount);
+    Transfer(address(0), _to, _amount);
+    return true;
   }
 
   function transfer(address _to, uint256 _value) public notLocked returns (bool) {
