@@ -35,6 +35,7 @@ export default function (Token, accounts) {
 
   it('should return correct balances after transfering from another account', async function () {
     await token.mint(accounts[0], 100);
+    await token.finishMinting();
     await token.approve(accounts[1], 100);
     await token.transferFrom(accounts[0], accounts[2], 100, {from: accounts[1]});
     const balance0 = await token.balanceOf(accounts[0]);
@@ -47,6 +48,7 @@ export default function (Token, accounts) {
 
   it('should throw an error when trying to transfer more than allowed', async function () {
     await token.mint(accounts[0], 100);
+    await token.finishMinting();
     await token.approve(accounts[1], 99);
     await assertRevert(token.transferFrom(accounts[0], accounts[2], 100, {from: accounts[1]}));
   });
@@ -85,11 +87,13 @@ export default function (Token, accounts) {
 
   it('should throw an error when trying to transfer to 0x0', async function () {
     await token.mint(accounts[0], 100);
+    await token.finishMinting();
     await assertRevert(token.transfer(0x0, 100));
   });
 
   it('should throw an error when trying to transfer to 0x0 from another account', async function () {
     await token.mint(accounts[0], 100);
+    await token.finishMinting();
     await token.approve(accounts[1], 100);
     await assertRevert(token.transferFrom(accounts[0], 0x0, 100, {from: accounts[1]}));
   });

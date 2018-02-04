@@ -14,12 +14,12 @@ export default function (Token, accounts) {
     assert.equal(saleAgent, accounts[1]);
   });
 
-  it('should mint only from sale agent accounts', async function () {
+  it('should mint from owner or sale agent accounts only', async function () {
     await token.setSaleAgent(accounts[1]);
+    await token.mint(accounts[2], 100, {from: accounts[0]});
     await token.mint(accounts[2], 100, {from: accounts[1]});
     const balance = await token.balanceOf(accounts[2]);
-    assert.equal(balance, 100);
-    await assertRevert(token.mint(accounts[2], 100, {from: accounts[0]}));
+    assert.equal(balance, 200);
     await assertRevert(token.mint(accounts[2], 100, {from: accounts[2]}));
   });
 

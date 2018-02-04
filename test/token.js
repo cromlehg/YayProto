@@ -4,9 +4,9 @@ import mintable from './token/mintable';
 import ownable from './token/ownable';
 import standard from './token/standard';
 
-const token = artifacts.require('REPUToken.sol');
+const token = artifacts.require('YayProtoToken.sol');
 
-contract('REPU Token', function (accounts) {
+contract('Basic Token', function (accounts) {
   describe('Basic Token', function () {
     basic(token, accounts);
   });
