@@ -23,7 +23,12 @@
   "devDependencies": {},
   "scripts": {
     "test": "./node_modules/.bin/truffle test",
-    "flatten": "./node_modules/.bin/truffle-flattener ./contracts/Configurator.sol > ./deploy/contracts.sol"
+    "flatten": "./node_modules/.bin/truffle-flattener ./contracts/Configurator.sol > ./deploy/contracts.sol",
+    "flatten-configurator": "./node_modules/.bin/truffle-flattener ./contracts/TestConfigurator.sol > ./deploy/TestConfigurator.sol",
+    "flatten-token": "./node_modules/.bin/truffle-flattener ./contracts/YayProtoToken.sol > ./deploy/Token.sol",
+    "flatten-presale": "./node_modules/.bin/truffle-flattener ./contracts/Presale.sol > ./deploy/Presale.sol",
+    "flatten-mainsale": "./node_modules/.bin/truffle-flattener ./contracts/Mainsale.sol > ./deploy/Mainsale.sol",
+    "flatten-test": "npm run flatten-configurator && npm run flatten-token && npm run flatten-presale && npm run flatten-mainsale"
   },
   "repository": {
     "type": "git",
