@@ -4,19 +4,21 @@
     "security"
   ],
   "rules": {
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "indentation": [
-      "error",
-      2
-    ],
     "arg-overflow": [
       "warning",
       3
     ],
+    "blank-lines": 0,
+    "indentation": [
+      "error",
+      2
+    ],
+    "mixedcase": 0,
+    "quotes": [
+      "error",
+      "single"
+    ],
     "uppercase": 0,
-    "mixedcase": 0
+    "function-order": 0
   }
 }
