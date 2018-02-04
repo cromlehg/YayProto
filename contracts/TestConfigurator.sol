@@ -100,6 +100,10 @@ contract TestConfigurator is Ownable {
 
         token.setSaleAgent(presale);
 
+        token.transferOwnership(owner);
+        presale.transferOwnership(owner);
+        mainsale.transferOwnership(owner);
+
     }
 
 }
