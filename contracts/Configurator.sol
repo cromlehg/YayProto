@@ -16,8 +16,8 @@ contract Configurator is Ownable {
   function deploy() public onlyOwner {
 
     token = new YayProtoToken();
-
     presale = new Presale();
+    mainsale = new Mainsale();
 
     presale.setToken(token);
     presale.setWallet(0x00c286bFbEfa2e7D060259822EDceA2E922a2B7C);
@@ -32,9 +32,7 @@ contract Configurator is Ownable {
     presale.addMilestone(7,30);
     presale.addMilestone(7,25);
     presale.addMilestone(7,20);
-    token.setSaleAgent(presale);
-
-    mainsale = new Mainsale();
+    presale.setMainsale(mainsale);
 
     mainsale.setToken(token);
     mainsale.setPrice(7500000000000000000000);
@@ -56,13 +54,12 @@ contract Configurator is Ownable {
     mainsale.addMilestone(7,4);
     mainsale.addMilestone(7,0);
 
-    presale.setMainsale(mainsale);
+    token.setSaleAgent(presale);
 
-    owner = 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A;
-
-    token.transferOwnership(owner);
-    presale.transferOwnership(owner);
-    mainsale.transferOwnership(owner);
+    manager = 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A;
+    token.transferOwnership(manager);
+    presale.transferOwnership(manager);
+    mainsale.transferOwnership(manager);
   }
 
 }
