@@ -45,10 +45,23 @@ contract Mainsale {
 
 contract TestConfigurator is Ownable {
 
-    function deploy(address _token, address _presale, address _mainsale) public onlyOwner{
-        YayProtoToken token = YayProtoToken(_token);
-        Presale presale = Presale(_presale);
-        Mainsale mainsale = Mainsale(_mainsale);
+    YayProtoToken public token;
+    Presale public presale;
+    Mainsale public mainsale;
+
+    function setToken(address _token) public onlyOwner {
+      token = YayProtoToken(_token);
+    }
+
+    function setPresale(address _presale) public onlyOwner {
+      presale = Presale(_presale);
+    }
+
+    function setMainsale(address _mainsale) public onlyOwner {
+      mainsale = Mainsale(_mainsale);
+    }
+
+    function deploy() public onlyOwner {
 
         presale.setToken(token);
         presale.setWallet(0x00c286bFbEfa2e7D060259822EDceA2E922a2B7C);
@@ -63,7 +76,7 @@ contract TestConfigurator is Ownable {
         presale.addMilestone(7,30);
         presale.addMilestone(7,25);
         presale.addMilestone(7,20);
-        presale.setMainsale(_mainsale);
+        presale.setMainsale(mainsale);
 
         mainsale.setToken(token);
         mainsale.setPrice(7500000000000000000000);
@@ -85,7 +98,7 @@ contract TestConfigurator is Ownable {
         mainsale.addMilestone(7,4);
         mainsale.addMilestone(7,0);
 
-        token.setSaleAgent(_presale);
+        token.setSaleAgent(presale);
 
     }
 
