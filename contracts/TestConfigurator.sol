@@ -50,28 +50,28 @@ contract TestConfigurator is Ownable {
         Presale presale = Presale(_presale);
         Mainsale mainsale = Mainsale(_mainsale);
 
-        presale.setPrice(7500);
-        presale.setWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
+        presale.setToken(token);
+        presale.setWallet(0x00c286bFbEfa2e7D060259822EDceA2E922a2B7C);
         presale.setStart(1517356800);
         presale.setMinPrice(100000000000000000);
+        presale.setPrice(7500000000000000000000);
         presale.setSoftcap(3000000000000000000000);
         presale.setHardcap(11250000000000000000000);
-        presale.setMainsale(_mainsale);
         presale.addMilestone(7,60);
         presale.addMilestone(7,50);
         presale.addMilestone(7,40);
         presale.addMilestone(7,30);
         presale.addMilestone(7,25);
         presale.addMilestone(7,20);
-        presale.setToken(_token);
-        presale.transferOwnership(owner);
+        presale.setMainsale(_mainsale);
 
-        mainsale.setPrice(7500);
-        mainsale.setWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
-        mainsale.setDevelopersTokensWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
-        mainsale.setTeamTokensWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
-        mainsale.setMarketingTokensWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
-        mainsale.setAdvisorsTokensWallet(0x29b637Ca54Fc1A9d8d92475f8a64C199c91B82E4);
+        mainsale.setToken(token);
+        mainsale.setPrice(7500000000000000000000);
+        mainsale.setWallet(0x009693f53723315219f681529fE6e05a91a28C41);
+        mainsale.setDevelopersTokensWallet(0x0097895f899559D067016a3d61e3742c0da533ED);
+        mainsale.setTeamTokensWallet(0x00137668FEda9d278A242C69aB520466A348C954);
+        mainsale.setMarketingTokensWallet(0x00A8a63f43ce630dbd3b96F1e040A730341bAa4D);
+        mainsale.setAdvisorsTokensWallet(0x00764817d154237115DdA4FAA76C7aaB5dE3cb25);
         mainsale.setStart(1523750400);
         mainsale.setMinPrice(100000000000000000);
         mainsale.setHardcap(95000000000000000000000);
@@ -84,11 +84,8 @@ contract TestConfigurator is Ownable {
         mainsale.addMilestone(7,7);
         mainsale.addMilestone(7,4);
         mainsale.addMilestone(7,0);
-        mainsale.setToken(_token);
-        mainsale.transferOwnership(owner);
 
         token.setSaleAgent(_presale);
-        token.transferOwnership(owner);
 
     }
 
