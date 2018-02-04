@@ -3,7 +3,6 @@ import tokens from '../helpers/tokens';
 import {advanceBlock} from '../helpers/advanceToBlock';
 import {duration} from '../helpers/increaseTime';
 import latestTime from '../helpers/latestTime';
-import EVMRevert from '../helpers/EVMRevert';
 
 require('chai')
   .use(require('chai-as-promised'))
@@ -26,7 +25,7 @@ export default function (Token, Crowdsale, wallets) {
     this.afterEnd = this.end + duration.seconds(1);
     this.price = tokens(7500);
     this.softcap = ether(3000);
-    this.hardcap = ether(11);
+    this.hardcap = ether(11250);
     this.minInvestmentLimit = ether(0.1);
 
     token = await Token.new();
@@ -48,22 +47,9 @@ export default function (Token, Crowdsale, wallets) {
     await token.transferOwnership(wallets[1]);
   });
 
-  it('should accept payments within hardcap', async function () {
-    await crowdsale.sendTransaction({value: this.hardcap.minus(ether(1)), from: wallets[3]}).should.be.fulfilled;
-    await crowdsale.sendTransaction({value: ether(1), from: wallets[4]}).should.be.fulfilled;
-  });
-
-  it('should reject payments outside hardcap', async function () {
-    await crowdsale.sendTransaction({value: this.hardcap, from: wallets[5]}).should.be.fulfilled;
-    await crowdsale.sendTransaction({value: ether(1), from: wallets[4]}).should.be.rejectedWith(EVMRevert);
-  });
-
-  it('should not accept payments that exceed hardcap', async function () {
-    await crowdsale.sendTransaction({value: this.hardcap.plus(1), from: wallets[6]}).should.be.rejectedWith(EVMRevert);
-  });
-
-  it('should reject payments below min investment limit', async function () {
-    const value = this.minInvestmentLimit.minus(ether(0.01));
-    await crowdsale.sendTransaction({value: value, from: wallets[5]}).should.be.rejectedWith(EVMRevert);
+  it('should directMint', async function () {
+    await crowdsale.directMint(wallets[4], tokens(1), {from: wallets[1]}).should.be.fulfilled;
+    const balance = await token.balanceOf(wallets[4]);
+    balance.should.bignumber.equal(this.price.times(1.6));
   });
 }
