@@ -36,6 +36,7 @@ contract Presale is SoftcapFeature, CommonSale {
     if (updateRefundState()) {
       token.finishMinting();
     } else {
+      withdraw();
       token.setSaleAgent(mainsale);
     }
   }
