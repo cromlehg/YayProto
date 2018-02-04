@@ -70,12 +70,12 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 * _Contract owner_             : 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A
 
 _Milestones_
-* 5 days - bonus 80%
-* 5 days - bonus 50%
-* 5 days - bonus 40%
-* 5 days - bonus 30%
-* 5 days - bonus 25%
-* 5 days - bonus 20%
+* 7 days - bonus 60%
+* 7 days - bonus 50%
+* 7 days - bonus 40%
+* 7 days - bonus 30%
+* 7 days - bonus 25%
+* 7 days - bonus 20%
 
 #### ICO
 * _Hardcap_                    : 95 000 ETH
