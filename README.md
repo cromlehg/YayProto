@@ -56,9 +56,9 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 * _For sale_                    : 65%
 
 ### Links
-1. _Token_ -
-2. _Presale_ -
-3. _Mainsale_ -
+1. _Token_ - https://etherscan.io/address/0x6846c829d6645590bc877674b98c465a26462143
+2. _Presale_ - https://etherscan.io/address/0x2dd35cbbbc058c37acf7821d2abde9595eb4c2c2
+3. _Mainsale_ - https://etherscan.io/address/0x3ad041ebf3b2c2e518760372b2b22413bc029114
 
 ### Crowdsale stages
 
