@@ -743,10 +743,9 @@ contract Configurator is Ownable {
 
     token.setSaleAgent(presale);
 
-    address manager = 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A;
-    token.transferOwnership(manager);
-    presale.transferOwnership(manager);
-    mainsale.transferOwnership(manager);
+    token.transferOwnership(owner);
+    presale.transferOwnership(owner);
+    mainsale.transferOwnership(owner);
   }
 
 }
