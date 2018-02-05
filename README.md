@@ -149,3 +149,46 @@ https://ropsten.etherscan.io/tx/0x1555fddb9176c7464346dad2bdefcb942ec9f75dbb16e3
 * withdraw => 3.1 ETH to wallet, gas = 30262  
 https://ropsten.etherscan.io/tx/0x1f6552b2b7d8c363e326bf95cd154971b4c23c914dacb8a293d661af92e46509
 
+#### Mainsale
+* _Price_                     : 7500 YPT per 1 ETH
+* _Minimal investment limit_  : 0.1 ETH
+* _Hardcap_                   : 6 ETH
+* _Wallet_                    : 0x8fd94be56237ea9d854b23b78615775121dd1e82
+* _Team tokens percent_       : 10%
+* _Developers tokens percent_ : 10%
+* _Advisors tokens percent_   : 10%
+* _Marketing tokens percent_  : 5%
+* _Team tokens wallet_        : 0x00137668feda9d278a242c69ab520466a348c954
+* _Developers tokens wallet_  : 0x0097895f899559d067016a3d61e3742c0da533ed
+* _Adwisors tokens wallet_    : 0x00764817d154237115dda4faa76c7aab5de3cb25
+* _Marketing tokens wallet_   : 0x00a8a63f43ce630dbd3b96f1e040a730341baa4d
+
+_Milestones_
+
+* 7 days - bonus 15%
+* 7 days - bonus 10%
+* 7 days - bonus 7%
+* 7 days - bonus 4%
+* 7 days - without bonus
+
+##### Purchasers
+  
+* 0.2 ETH => rejected txn, it is not Start yet, gas = 30000
+https://ropsten.etherscan.io/tx/0xc93b23e3c72596129f0ea3411288af35f09aff4812b9d54ffec2d1bd3c52ab20
+
+* 0.2 ETH => 1500 tokens + 225 bonus tokens (15%), gas = 88142
+https://ropsten.etherscan.io/tx/0xf7ab152b6dcfcf8d5064a0863632bb2adc1683d559d1860e197f6003450747fc
+
+##### Service operations
+
+* setSaleAgent ,gas = 28598
+https://ropsten.etherscan.io/tx/0xb1d4cba4c405ce8014c851448758e170ab83459d8626997cd1f3de8afe6aeba5
+
+* setStart, gas = 28108
+https://ropsten.etherscan.io/tx/0xf76bb2cec9c64ddd00930d274e5f86710ac8aef5ba9c6523d2207b10a1922a95
+
+* finish, gas = 239654
+https://ropsten.etherscan.io/tx/0x041f8f609bcc9dfe56cc6416e43072054d59969ea2d3a94fe0d0e0f59fba96fc
+
+##### Token holders
+https://ropsten.etherscan.io/token/0x2f7d7e0700f4109071ec83180ec13fabcb0e323a#balances
