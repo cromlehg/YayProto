@@ -14,6 +14,7 @@
     "chai-as-promised": "^7.0.0",
     "chai-bignumber": "^2.0.0",
     "ethereumjs-util": "^5.1.3",
+    "ganache-cli": "^6.0.3",
     "truffle": "^4.0.5",
     "truffle-flattener": "^1.2.0",
     "truffle-hdwallet-provider": "0.0.3",
@@ -22,7 +23,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "./node_modules/.bin/truffle test",
+    "test": "./scripts/test.sh",
     "flatten": "./node_modules/.bin/truffle-flattener ./contracts/Configurator.sol > ./deploy/contracts.sol",
     "flatten-configurator": "./node_modules/.bin/truffle-flattener ./contracts/TestConfigurator.sol > ./deploy/TestConfigurator.sol",
     "flatten-token": "./node_modules/.bin/truffle-flattener ./contracts/YayProtoToken.sol > ./deploy/Token.sol",
