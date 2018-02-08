@@ -63,9 +63,9 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 ### Crowdsale stages
 
 #### Presale
-* _Hardcap_                    : 11 250 ETH
-* _Softcap_                    : 3000 ETH
-* _Start_                      : 31 Jan 2018 00:00:00 GMT
+* _Hardcap_                    : 1700 ETH
+* _Softcap_                    : 500 ETH
+* _Start_                      : 
 * _Wallet_                     : 0x00c286bFbEfa2e7D060259822EDceA2E922a2B7C
 * _Contract owner_             : 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A
 
@@ -78,7 +78,7 @@ _Milestones_
 * 7 days - bonus 20%
 
 #### ICO
-* _Hardcap_                    : 95 000 ETH
+* _Hardcap_                    : 46 000 ETH
 * _Start_                      : 
 * _Wallet_                     : 0x009693f53723315219f681529fE6e05a91a28C41
 * _Contract owner_             : 0x004a35d1AA9aAd1f1dA1415FA28Cf9045A216c0A
