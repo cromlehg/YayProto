@@ -708,7 +708,7 @@ contract Configurator is Ownable {
 
     presale.setToken(token);
     presale.setWallet(0x00c286bFbEfa2e7D060259822EDceA2E922a2B7C);
-    presale.setStart(1517356800);
+    presale.setStart(1518440400);
     presale.setMinPrice(100000000000000000);
     presale.setPrice(7500000000000000000000);
     presale.setSoftcap(500000000000000000000);
@@ -728,7 +728,7 @@ contract Configurator is Ownable {
     mainsale.setTeamTokensWallet(0x00137668FEda9d278A242C69aB520466A348C954);
     mainsale.setMarketingTokensWallet(0x00A8a63f43ce630dbd3b96F1e040A730341bAa4D);
     mainsale.setAdvisorsTokensWallet(0x00764817d154237115DdA4FAA76C7aaB5dE3cb25);
-    mainsale.setStart(1523750400);
+    mainsale.setStart(1524488400);
     mainsale.setMinPrice(100000000000000000);
     mainsale.setHardcap(46000000000000000000000);
     mainsale.setDevelopersTokensPercent(10);
