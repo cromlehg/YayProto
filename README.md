@@ -1,3 +1,5 @@
+# Dnager!!! Project can be scam
+
 ![YayProto](logo.png "YayProto")
 
 # YayProto smart contract
