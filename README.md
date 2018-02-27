@@ -1,4 +1,4 @@
-# Dnager!!! Project can be scam
+# Danger!!! Project can be scam
 
 ![YayProto](logo.png "YayProto")
 
